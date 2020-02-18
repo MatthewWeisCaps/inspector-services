@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>org.sireum.hamr</groupId>
-    <artifactId>inspector-services-redis</artifactId>
+    <artifactId>inspector-services</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>inspector-services-redis</name>
+    <name>inspector-services</name>
     <description>API for services provided to the inspector-gui</description>
 
     <properties>
@@ -113,8 +113,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>${mainClass}</mainClass>
-                    <executable>true</executable>
+                    <executable>false</executable>
                 </configuration>
                 <executions>
                     <execution>
