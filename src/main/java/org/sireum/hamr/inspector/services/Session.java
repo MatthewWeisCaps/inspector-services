@@ -1,8 +1,8 @@
 package org.sireum.hamr.inspector.services;
 
-import lombok.*;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
 import java.util.Optional;
 
 /**
@@ -11,14 +11,19 @@ import java.util.Optional;
  * Represents a session (completed or currently running) visible by the Inspector.
  * This value MUST remain immutable because its hashcode is used as a key in certain caches.
  */
-@ToString
-@EqualsAndHashCode
-@AllArgsConstructor
 public final class Session implements Comparable<Session> {
 
-    @Getter
     @NotNull
     private final String name;
+
+    public Session(@NotNull String name) {
+        this.name = name;
+    }
+
+    @NotNull
+    public String getName() {
+        return name;
+    }
 
     @Override
     public int compareTo(@NotNull Session o) {
@@ -44,4 +49,21 @@ public final class Session implements Comparable<Session> {
         }
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Session session = (Session) o;
+        return name.equals(session.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }

@@ -2,12 +2,9 @@ package org.sireum.hamr.inspector.services;
 
 import javafx.collections.ObservableList;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.stereotype.Controller;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@Controller
-@SuppressWarnings("unused")
 public interface SessionService {
 
     @NotNull
