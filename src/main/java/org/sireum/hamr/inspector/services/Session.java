@@ -13,7 +13,7 @@ import java.util.Optional;
  */
 @ToString
 @EqualsAndHashCode
-@AllArgsConstructor(access = AccessLevel.PACKAGE)
+@AllArgsConstructor
 public final class Session implements Comparable<Session> {
 
     @Getter
