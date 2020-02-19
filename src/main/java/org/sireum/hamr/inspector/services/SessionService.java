@@ -1,31 +1,29 @@
 package org.sireum.hamr.inspector.services;
 
-import javafx.collections.ObservableList;
 import org.jetbrains.annotations.NotNull;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.GroupedFlux;
 import reactor.core.publisher.Mono;
 
 public interface SessionService {
 
     @NotNull
-    Mono<Long> startTime(@NotNull String key);
+    Flux<Session> sessions();
 
     @NotNull
-    Mono<Boolean> hasStopped(@NotNull String key);
+    Mono<Long> startTimeOf(@NotNull Session session);
 
     @NotNull
-    Mono<Long> stopTime(@NotNull String key);
+    Mono<Long> stopTimeOf(@NotNull Session session);
 
     @NotNull
-    Flux<String> querySessions();
-
-    void refreshSessionsList();
+    Mono<SessionStatus> statusOf(@NotNull Session session);
 
     @NotNull
-    Mono<Boolean> querySessionRunning(@NotNull String key);
+    Flux<GroupedFlux<Session, SessionStatus>> liveStatusUpdates();
 
     @NotNull
-    ObservableList<Session> sessionsList();
+    Flux<SessionStatus> liveStatusUpdatesOf(@NotNull Session session);
 
 }
 

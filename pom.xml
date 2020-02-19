@@ -54,52 +54,28 @@
             <groupId>com.github.MatthewWeisCaps</groupId>
             <artifactId>inspector-capabilities</artifactId>
             <version>master-97ad2111fb-1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.sireum</groupId>
-                    <artifactId>art_2.12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.sireum</groupId>
-                    <artifactId>library_2.12</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.github.MatthewWeisCaps</groupId>
             <artifactId>inspector-stream</artifactId>
-            <version>c77d5238e5</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.sireum</groupId>
-                    <artifactId>art_2.12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.sireum</groupId>
-                    <artifactId>library_2.12</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>master-c77d5238e5-1</version>
         </dependency>
         <dependency>
             <groupId>com.github.MatthewWeisCaps</groupId>
             <artifactId>inspector-common</artifactId>
-            <version>5fc7be7018</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.sireum</groupId>
-                    <artifactId>art_2.12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.sireum</groupId>
-                    <artifactId>library_2.12</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>master-425bfca566-1</version>
         </dependency>
 
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>17.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
         </dependency>
 
     </dependencies>
