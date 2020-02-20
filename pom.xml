@@ -45,6 +45,34 @@
         <dependency>
             <groupId>com.github.MatthewWeisCaps</groupId>
             <artifactId>inspector-common</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.github.MatthewWeisCaps</groupId>
+                    <artifactId>inspector-stream</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.jetbrains</groupId>
+                    <artifactId>annotations</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.MatthewWeisCaps</groupId>
+            <artifactId>inspector-stream</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.jetbrains</groupId>
+                    <artifactId>annotations</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
