@@ -44,27 +44,16 @@
         </dependency>
         <dependency>
             <groupId>com.github.MatthewWeisCaps</groupId>
-            <artifactId>inspector-capabilities</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.MatthewWeisCaps</groupId>
-            <artifactId>inspector-stream</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.MatthewWeisCaps</groupId>
             <artifactId>inspector-common</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -72,19 +61,10 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>${project.basedir}/src/main/java</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
