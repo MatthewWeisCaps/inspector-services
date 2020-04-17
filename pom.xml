@@ -7,17 +7,16 @@
     <parent>
         <groupId>com.github.MatthewWeisCaps</groupId>
         <artifactId>inspector-bom</artifactId>
-        <version>0.2-SNAPSHOT</version>
+        <version>0.4-SNAPSHOT</version>
     </parent>
 
     <groupId>org.sireum.hamr</groupId>
     <artifactId>inspector-services</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.4-SNAPSHOT</version>
     <name>inspector-services</name>
     <description>API for services provided to the inspector-gui</description>
 
     <properties>
-        <generated.repo>${project.basedir}/generated/repo</generated.repo>
         <java.version>11</java.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -81,26 +80,13 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.0.0-M2</version>
+                <artifactId>maven-source-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>enforce-version</id>
+                        <id>attach-sources</id>
                         <goals>
-                            <goal>enforce</goal>
+                            <goal>jar-no-fork</goal>
                         </goals>
-                        <phase>validate</phase>
-                        <configuration>
-                            <rules>
-                                <requireSameVersions>
-                                    <dependencies>
-                                        <dependency>org.sireum.art_2.12</dependency>
-                                    </dependencies>
-                                </requireSameVersions>
-                            </rules>
-                            <fail>true</fail>
-                            <failFast>true</failFast>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
