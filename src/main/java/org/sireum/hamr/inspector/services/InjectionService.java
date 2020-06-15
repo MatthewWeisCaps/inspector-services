@@ -32,7 +32,7 @@ public interface InjectionService {
 
     /**
      * Inject an {@link Injection} into the event-stream of a running {@link Session}.
-     * This method will have no effect if a stopped or non-existent session is passed.
+     * This method will have no effect if given a non-existent or completed session.
      *
      * @param session A running {@link Session} whose event stream will be injected into.
      * @param injection A {@link Injection} object to describe how and what should be injected.
