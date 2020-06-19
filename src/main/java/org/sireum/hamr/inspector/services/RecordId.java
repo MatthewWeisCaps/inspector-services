@@ -26,7 +26,6 @@
 package org.sireum.hamr.inspector.services;
 
 import org.jetbrains.annotations.NotNull;
-import org.sireum.hamr.inspector.common.Msg;
 
 public abstract class RecordId implements Comparable<RecordId> {
     RecordId() { }
@@ -36,10 +35,11 @@ public abstract class RecordId implements Comparable<RecordId> {
         return new ConcreteRecordId(millisecondsTime, sequenceNumber);
     }
 
-    @NotNull
-    public static RecordId from(@NotNull Msg msg) {
-        return new ReferenceRecordId(msg);
-    }
+    // todo use w/ msg wrapper instead
+//    @NotNull
+//    public static RecordId from(@NotNull Msg msg) {
+//        return new ReferenceRecordId(msg);
+//    }
 
     public abstract long timestamp();
 
@@ -91,23 +91,23 @@ public abstract class RecordId implements Comparable<RecordId> {
         }
     }
 
-    private static final class ReferenceRecordId extends RecordId {
-
-        private final Msg msg;
-
-        ReferenceRecordId(@NotNull Msg msg) {
-            this.msg = msg;
-        }
-
-        @Override
-        public long timestamp() {
-            return msg.timestamp();
-        }
-
-        @Override
-        public long sequence() {
-            return msg.sequence();
-        }
-    }
+//    private static final class ReferenceRecordId extends RecordId {
+//
+//        private final Msg msg;
+//
+//        ReferenceRecordId(@NotNull Msg msg) {
+//            this.msg = msg;
+//        }
+//
+//        @Override
+//        public long timestamp() {
+//            return msg.timestamp();
+//        }
+//
+//        @Override
+//        public long sequence() {
+//            return msg.sequence();
+//        }
+//    }
 
 }
